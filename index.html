@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d35">
+  <meta name="description" content="Центр настольного тенниса на Скляренко, 12 в Самаре. Четыре стола, тренировки, турниры и игра каждый день с 10:00 до 22:00. Бронь: 244-30-40.">
+  <title>ЦЕНТР — настольный теннис на Скляренко, 12</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&family=Roboto+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#17261f;--green:#173d35;--red:#d85032;--yellow:#eed96a;--paper:#f2eee4;--cream:#fffaf0;--faint:#d9d4c8;--muted:#596a60}
+    *{box-sizing:border-box}
+    html{scroll-behavior:auto}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:'Golos Text',Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    a:focus-visible{outline:3px solid var(--red);outline-offset:4px}
+    ::selection{background:var(--yellow);color:var(--ink)}
+    .container{width:min(100% - 72px,1280px);margin-inline:auto}
+    .mono{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;line-height:1.5;letter-spacing:.07em;text-transform:uppercase}
+    .display{font-family:'Roboto Condensed','Arial Narrow',Arial,sans-serif;font-weight:900;line-height:.86;letter-spacing:-.055em;text-transform:uppercase}
+    .link-arrow{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;border-bottom:1px solid currentColor;padding-bottom:5px;white-space:nowrap}
+    .link-arrow:hover{color:var(--red)}
+    .button{display:inline-flex;justify-content:space-between;align-items:center;gap:36px;min-height:57px;padding:0 17px 0 21px;background:var(--red);color:var(--cream);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.025em;border:1px solid var(--red)}
+    .button:hover{background:var(--ink);border-color:var(--ink)}
+    .button span{font-family:'Golos Text',sans-serif;font-size:24px;font-weight:400;line-height:1}
+    .button--light{background:var(--cream);color:var(--green);border-color:var(--cream)}
+    .button--light:hover{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+    .masthead{border-bottom:1px solid var(--ink);background:var(--paper)}
+    .masthead__top{min-height:35px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--faint);color:var(--muted)}
+    .masthead__main{height:91px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px}
+    .nav{display:flex;align-items:center;gap:23px}
+    .nav a{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;font-weight:700}
+    .nav a:hover{color:var(--red)}
+    .logo{display:inline-flex;align-items:baseline;gap:3px;font-family:'Roboto Condensed','Arial Narrow',Arial,sans-serif;font-size:44px;line-height:1;font-weight:900;letter-spacing:-.09em;text-transform:uppercase;color:var(--green)}
+    .logo span{color:var(--red)}
+    .masthead__phone{justify-self:end;font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:700;white-space:nowrap;border:1px solid var(--ink);padding:11px 15px}
+    .masthead__phone:hover{background:var(--ink);color:var(--paper)}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--ink)}
+    .hero__grid{display:grid;grid-template-columns:1.06fr .94fr;min-height:635px}
+    .hero__copy{position:relative;z-index:2;padding:49px 35px 42px 0;display:flex;flex-direction:column}
+    .hero__kicker{display:flex;align-items:center;gap:12px}
+    .hero__kicker:before{content:'●';font-size:18px;color:var(--red)}
+    .hero h1{font-size:clamp(105px,13.1vw,210px);margin:30px 0 7px;letter-spacing:-.085em;color:var(--green)}
+    .hero__subtitle{font-family:'Roboto Condensed','Arial Narrow',Arial,sans-serif;font-size:clamp(30px,3.75vw,51px);font-weight:700;text-transform:uppercase;line-height:1;letter-spacing:-.045em;margin:0 0 25px;max-width:580px}
+    .hero__subtitle em{font-style:normal;color:var(--red)}
+    .hero__body{max-width:475px;font-size:16px;line-height:1.65;margin:0 0 27px}
+    .hero__foot{margin-top:auto;display:flex;align-items:end;justify-content:space-between;gap:20px;padding-top:34px}
+    .hero__foot small{max-width:175px;color:var(--muted);font-size:12px;line-height:1.6}
+    .hero__art{position:relative;background:var(--green);overflow:hidden;border-left:1px solid var(--ink);min-height:600px}
+    .hero__art:before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 77px,rgba(255,255,255,.038) 78px 79px),repeating-linear-gradient(0deg,transparent 0 77px,rgba(255,255,255,.038) 78px 79px)}
+    .court-art{width:95%;height:95%;position:absolute;top:2.5%;left:2.5%}
+    .art-caption{position:absolute;left:25px;bottom:24px;color:#cfdbd0;transform:rotate(-90deg);transform-origin:left bottom}
+    .art-no{position:absolute;right:27px;bottom:20px;font-family:'Roboto Condensed',sans-serif;font-size:96px;font-weight:900;color:rgba(255,250,240,.16);line-height:1}
+    .booking{background:var(--yellow);border-bottom:1px solid var(--ink)}
+    .booking__inner{min-height:80px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:25px}
+    .booking__alert{display:flex;align-items:center;gap:12px;font-family:'Roboto Condensed',sans-serif;font-size:27px;font-weight:900;text-transform:uppercase;line-height:1}
+    .booking__alert:before{content:'!';width:37px;height:37px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;font-size:26px}
+    .booking p{font-size:13px;line-height:1.5;margin:0}
+    .booking a{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:700;white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
+    .ledger{padding:113px 0 122px}
+    .section-head{display:flex;justify-content:space-between;align-items:start;gap:35px;margin-bottom:42px}
+    .section-head h2{font-size:clamp(60px,8vw,110px);margin:8px 0 0;color:var(--green)}
+    .section-head__note{max-width:285px;padding-top:29px;font-size:14px;line-height:1.65}
+    .ledger__rows{border-top:2px solid var(--ink)}
+    .ledger__row{display:grid;grid-template-columns:67px 1fr 1.25fr auto;gap:20px;align-items:center;min-height:134px;border-bottom:1px solid var(--ink)}
+    .ledger__number{align-self:start;padding-top:32px;color:var(--red)}
+    .ledger__row h3{font-family:'Roboto Condensed',sans-serif;font-size:clamp(35px,4vw,55px);font-weight:800;text-transform:uppercase;letter-spacing:-.04em;margin:0}
+    .ledger__row p{font-size:14px;line-height:1.65;max-width:420px;margin:0;color:var(--muted)}
+    .ledger__symbol{font-family:'Roboto Condensed',sans-serif;font-size:85px;line-height:1;font-weight:900;color:var(--red);text-align:right}
+    .ledger__footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:26px}
+    .ledger__footer p{max-width:450px;margin:0;font-size:13px;line-height:1.6;color:var(--muted)}
+    .rates{background:var(--green);color:var(--cream);padding:100px 0 110px;position:relative;overflow:hidden}
+    .rates:before{content:'₽';position:absolute;top:-140px;right:-10px;font-family:'Roboto Condensed',sans-serif;font-size:510px;font-weight:900;line-height:1;color:rgba(255,255,255,.025);pointer-events:none}
+    .rates__head{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:48px;position:relative}
+    .rates h2{font-size:clamp(73px,9vw,130px);margin:7px 0 0;color:var(--yellow)}
+    .rates__head p{max-width:470px;font-size:15px;line-height:1.7;margin:0 0 9px;color:#d6dfd4}
+    .rate-board{position:relative;border:1px solid rgba(255,255,255,.65)}
+    .rate-board__row{display:grid;grid-template-columns:1.25fr .75fr .6fr;align-items:center;gap:20px;min-height:94px;padding:15px 30px;border-bottom:1px solid rgba(255,255,255,.36)}
+    .rate-board__row:last-child{border-bottom:0}
+    .rate-board__row--head{min-height:44px;background:var(--yellow);color:var(--green);padding-block:8px}
+    .rate-board__row--head span{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+    .rate-board__row--head span:last-child{text-align:right}
+    .rate-board__row strong{display:block;font-size:17px;line-height:1.35}
+    .rate-board__row small{display:block;font-size:12px;line-height:1.5;color:#b4c5b5;margin-top:4px}
+    .rate-board__row--head small{color:inherit}
+    .rate-board__time{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#d6dfd4}
+    .rate-board__value{text-align:right;font-family:'Roboto Condensed',sans-serif;font-size:49px;line-height:1;font-weight:800;white-space:nowrap;color:var(--yellow)}
+    .rate-board__value em{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;font-style:normal;color:var(--cream)}
+    .rates__small{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.65);border-top:0}
+    .rates__small>div{padding:23px 25px 25px;min-height:163px}
+    .rates__small>div+div{border-left:1px solid rgba(255,255,255,.36)}
+    .rates__small b{display:block;font-family:'Roboto Condensed',sans-serif;font-size:39px;line-height:1;margin:12px 0;color:var(--yellow)}
+    .rates__small p{font-size:11px;line-height:1.5;color:#cbd7cd;margin:0}
+    .rates__note{font-size:12px;line-height:1.6;color:#cbd7cd;max-width:730px;margin:22px 0 0}
+    .culture{padding:118px 0 0;background:var(--cream)}
+    .culture__intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:10%;align-items:end;padding-bottom:65px}
+    .culture h2{font-size:clamp(61px,7.3vw,103px);margin:10px 0 0;color:var(--ink)}
+    .culture__intro p{font-size:18px;line-height:1.75;margin:0 0 5px;max-width:570px}
+    .culture__grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+    .culture__feature{min-height:446px;padding:40px 45px;display:flex;flex-direction:column;justify-content:space-between;background:var(--red);color:var(--cream)}
+    .culture__feature h3{font-family:'Roboto Condensed',sans-serif;font-size:clamp(47px,5.6vw,78px);text-transform:uppercase;line-height:.95;letter-spacing:-.045em;margin:0}
+    .culture__feature p{max-width:430px;font-size:14px;line-height:1.7;margin:0}
+    .culture__feature .stamp{align-self:flex-end;width:100px;height:100px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;line-height:1.5;transform:rotate(13deg)}
+    .culture__things{display:grid;grid-template-columns:1fr 1fr;align-content:stretch;border-left:1px solid var(--ink);background:var(--paper)}
+    .culture__thing{padding:31px;border-bottom:1px solid var(--ink)}
+    .culture__thing:nth-child(odd){border-right:1px solid var(--ink)}
+    .culture__thing:nth-child(n+3){border-bottom:0}
+    .culture__thing strong{display:block;font-family:'Roboto Condensed',sans-serif;font-size:27px;text-transform:uppercase;margin:14px 0 6px}
+    .culture__thing p{font-size:12px;line-height:1.65;margin:0;color:var(--muted)}
+    .culture__thing .icon{font-family:'Roboto Condensed',sans-serif;font-weight:900;font-size:33px;color:var(--red);line-height:1}
+    .tourney{padding:100px 0 116px;background:var(--cream)}
+    .tourney__grid{display:grid;grid-template-columns:1fr .9fr;gap:8%;align-items:center}
+    .tourney h2{font-size:clamp(64px,8.2vw,116px);margin:10px 0 24px;color:var(--green)}
+    .tourney__copy{max-width:525px;font-size:17px;line-height:1.75;margin:0 0 29px}
+    .tourney__poster{position:relative;background:var(--yellow);border:1px solid var(--ink);min-height:440px;padding:29px;box-shadow:14px 14px 0 var(--red);transform:rotate(2deg);overflow:hidden}
+    .tourney__poster:before{content:'';position:absolute;inset:15px;border:1px solid var(--ink);pointer-events:none}
+    .poster__top{position:relative;display:flex;justify-content:space-between;gap:15px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+    .poster__title{position:relative;font-family:'Roboto Condensed',sans-serif;font-size:clamp(65px,7.6vw,110px);font-weight:900;line-height:.8;text-transform:uppercase;letter-spacing:-.07em;margin:40px 0 30px}
+    .poster__title span{color:var(--red)}
+    .poster__foot{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:2px solid var(--ink);padding-top:18px}
+    .poster__foot p{font-size:12px;line-height:1.5;margin:0}
+    .find{background:#e4dfd3;padding:107px 0 117px}
+    .find__grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:10%;align-items:start}
+    .find h2{font-size:clamp(64px,7.8vw,104px);margin:9px 0 27px;color:var(--green)}
+    .find__address{font-size:21px;line-height:1.45;font-weight:700;margin:0 0 28px}
+    .find__steps{border-top:2px solid var(--ink)}
+    .find__step{display:grid;grid-template-columns:105px 1fr;gap:25px;padding:21px 0;border-bottom:1px solid var(--ink)}
+    .find__step b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--red);text-transform:uppercase}
+    .find__step p{font-size:14px;line-height:1.65;margin:0}
+    .find__mini{margin-top:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .find__mini span{font-size:12px;color:var(--muted);line-height:1.5}
+    .find__diagram{min-height:503px;position:relative;overflow:hidden;background:var(--green);border:1px solid var(--ink)}
+    .map-grid{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 72px,rgba(255,255,255,.07) 73px 74px),repeating-linear-gradient(90deg,transparent 0 72px,rgba(255,255,255,.07) 73px 74px)}
+    .map-road{position:absolute;background:#d2d1ba;transform-origin:center}
+    .map-road--a{width:160%;height:40px;left:-22%;top:56%;transform:rotate(-33deg)}
+    .map-road--b{width:160%;height:32px;left:-28%;top:44%;transform:rotate(28deg)}
+    .map-road--c{width:115%;height:28px;left:-8%;top:70%;transform:rotate(-2deg)}
+    .map-label{position:absolute;z-index:2;background:var(--cream);color:var(--green);padding:7px 9px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase}
+    .map-label--metro{left:7%;bottom:13%}
+    .map-label--club{right:7%;top:20%;background:var(--yellow);font-size:12px;padding:12px}
+    .map-label--street{left:14%;top:19%;transform:rotate(-33deg);background:transparent;color:var(--cream)}
+    .map-dot{position:absolute;z-index:2;width:23px;height:23px;border-radius:50%;border:6px solid var(--cream);background:var(--red)}
+    .map-dot--metro{left:19%;bottom:24%}
+    .map-dot--club{right:27%;top:33%;width:37px;height:37px;border:8px solid var(--yellow)}
+    .map-line{position:absolute;z-index:2;left:23%;bottom:29%;width:52%;height:39%;border:3px dashed var(--red);border-left:0;border-bottom:0;transform:rotate(-12deg)}
+    .map-corner{position:absolute;right:18px;bottom:16px;color:var(--cream)}
+    .last-call{background:var(--red);color:var(--cream);padding:90px 0 96px}
+    .last-call__grid{display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px}
+    .last-call h2{font-size:clamp(64px,8.6vw,128px);margin:11px 0 0;max-width:790px}
+    .last-call__action{text-align:right}
+    .last-call__phone{display:block;font-family:'Roboto Condensed',sans-serif;font-size:clamp(40px,4.5vw,65px);font-weight:900;line-height:1;letter-spacing:-.04em;margin:0 0 17px;white-space:nowrap}
+    .last-call__phone:hover{text-decoration:underline;text-underline-offset:7px}
+    .last-call__action p{margin:0;font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase}
+    .footer{background:var(--ink);color:var(--cream);padding:48px 0 25px}
+    .footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;padding-bottom:70px}
+    .footer .logo{color:var(--cream)}
+    .footer__tag{font-size:13px;line-height:1.7;color:#b0beb4;max-width:300px;margin:19px 0 0}
+    .footer__col .mono{color:#a8b7ad;margin:0 0 17px}
+    .footer__col a{display:block;margin:0 0 14px;font-size:13px;font-weight:600}
+    .footer__col a:hover{color:var(--yellow)}
+    .footer__bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid #46584a;color:#a8b7ad;font-size:11px;line-height:1.5}
+    @media(max-width:1100px){.container{width:min(100% - 44px,1280px)}.nav{gap:12px}.nav a{font-size:10px}.masthead__phone{font-size:12px}.hero h1{font-size:clamp(98px,13vw,150px)}.hero__grid{min-height:590px}.hero__subtitle{font-size:35px}.ledger__row{grid-template-columns:45px 1fr 1.2fr 70px}.rates__small>div{padding:18px}.rates__small b{font-size:32px}}
+    @media(max-width:780px){.container{width:min(100% - 34px,680px)}.masthead__top span:last-child{display:none}.masthead__main{height:73px;grid-template-columns:1fr auto}.nav{display:none}.logo{font-size:38px}.masthead__phone{grid-column:2}.hero__grid{display:flex;flex-direction:column}.hero__copy{padding:40px 0 35px}.hero h1{font-size:clamp(95px,19vw,155px);margin:25px 0 10px}.hero__subtitle{font-size:clamp(31px,6vw,46px)}.hero__foot{margin-top:6px}.hero__art{min-height:480px;border-left:0;border-top:1px solid var(--ink)}.booking__inner{grid-template-columns:1fr auto;gap:7px;padding-block:14px}.booking p{grid-column:1/-1;grid-row:2}.booking__alert{font-size:22px}.booking a{font-size:17px}.ledger,.rates,.tourney,.find{padding:75px 0 84px}.section-head{display:block}.section-head__note{max-width:520px;padding-top:12px}.ledger__row{grid-template-columns:38px 1fr auto;gap:10px;padding:17px 0;min-height:0}.ledger__number{padding-top:10px}.ledger__row p{grid-column:2;grid-row:2}.ledger__symbol{grid-column:3;grid-row:1/3}.rates__head{grid-template-columns:1fr;gap:10px}.rates__small{grid-template-columns:1fr 1fr}.rates__small>div:nth-child(3){border-left:0;border-top:1px solid rgba(255,255,255,.36)}.rates__small>div:nth-child(4){border-top:1px solid rgba(255,255,255,.36)}.culture{padding-top:75px}.culture__intro{grid-template-columns:1fr;gap:20px}.culture__grid{grid-template-columns:1fr}.culture__feature{min-height:350px}.culture__things{border-left:0;border-top:1px solid var(--ink)}.tourney__grid{grid-template-columns:1fr;gap:45px}.tourney__poster{max-width:600px}.find__grid{grid-template-columns:1fr;gap:40px}.find__diagram{min-height:460px}.last-call__grid{grid-template-columns:1fr}.last-call__action{text-align:left}.footer__grid{grid-template-columns:1fr 1fr}.footer__grid>div:first-child{grid-column:1/-1}}
+    @media(max-width:520px){.masthead__top{font-size:9px}.masthead__phone{padding:9px;font-size:11px}.logo{font-size:32px}.hero h1{font-size:clamp(82px,19vw,109px)}.hero__body{font-size:14px}.hero__foot{display:block}.hero__foot small{display:block;max-width:none;margin-top:16px}.hero__art{min-height:370px}.booking__alert{font-size:18px}.booking__alert:before{width:30px;height:30px;font-size:19px}.booking a{font-size:15px}.booking p{font-size:11px}.section-head h2,.culture h2,.tourney h2,.find h2{font-size:60px}.ledger__row h3{font-size:32px}.ledger__row p{font-size:12px}.ledger__symbol{font-size:51px}.ledger__footer{display:block}.ledger__footer .link-arrow{display:inline-block;margin-top:17px}.rates h2{font-size:81px}.rate-board__row{grid-template-columns:1fr auto;gap:8px;padding:15px;min-height:88px}.rate-board__row--head{display:none}.rate-board__time{grid-column:1}.rate-board__value{grid-column:2;grid-row:1/3;font-size:39px}.rate-board__row strong{font-size:14px}.rates__small>div{min-height:153px;padding:13px}.rates__small b{font-size:27px}.rates__small .mono{font-size:9px}.culture__intro p{font-size:15px}.culture__feature{padding:26px;min-height:340px}.culture__feature h3{font-size:55px}.culture__things{grid-template-columns:1fr 1fr}.culture__thing{padding:17px}.culture__thing strong{font-size:20px}.culture__thing p{font-size:10px}.tourney__copy{font-size:14px}.tourney__poster{min-height:350px;padding:24px;box-shadow:8px 8px 0 var(--red)}.poster__title{font-size:70px}.find__step{grid-template-columns:75px 1fr;gap:10px}.find__step p{font-size:12px}.find__mini{align-items:start;flex-direction:column}.find__diagram{min-height:350px}.last-call{padding:70px 0}.last-call h2{font-size:66px}.last-call__phone{font-size:52px}.footer__grid{gap:25px}.footer__col a{font-size:11px}.footer__bottom{display:block}.footer__bottom span{display:block;margin-top:10px}}
+  </style>
+</head>
+<body>
+  <header class="masthead" id="top">
+    <div class="container masthead__top mono"><span>Самара / Скляренко, 12 / 3 этаж</span><span>Открыто каждый день · 10:00–22:00</span></div>
+    <div class="container masthead__main">
+      <nav class="nav" aria-label="Разделы сайта"><a href="#play">Играть</a><a href="#prices">Цены</a><a href="#club">В клубе</a><a href="#route">Маршрут</a></nav>
+      <a class="logo" href="#top" aria-label="Центр — наверх">ЦЕНТР<span>.</span></a>
+      <a class="masthead__phone" href="tel:+78462443040">244-30-40 ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="hero__kicker mono">Клуб настольного тенниса / Октябрьский район</div>
+          <h1 class="display" id="hero-title">Центр.</h1>
+          <p class="hero__subtitle">По другую сторону стола — <em>твой человек.</em></p>
+          <p class="hero__body">Заходи сыграть, потренироваться или поболеть на турнире. Четыре стола, инструкторы и знакомое чувство: «ещё одну партию — и домой».</p>
+          <div class="hero__foot"><a class="button" href="tel:+78462443040">Забронировать стол <span aria-hidden="true">↗</span></a><small>Сначала позвони: свободные часы подтверждает администратор.</small></div>
+        </div>
+        <div class="hero__art" aria-label="Графическая схема стола для настольного тенниса">
+          <svg class="court-art" viewBox="0 0 600 680" role="img" aria-label="Игровой стол и траектория мяча" preserveAspectRatio="xMidYMid meet">
+            <defs><pattern id="net" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 0H10M0 0V8" stroke="#f2eee4" stroke-width=".55" opacity=".7"/></pattern></defs>
+            <circle cx="315" cy="335" r="280" fill="none" stroke="#b5c7b1" stroke-opacity=".3" stroke-width="2"/>
+            <circle cx="315" cy="335" r="213" fill="none" stroke="#b5c7b1" stroke-opacity=".25" stroke-width="2"/>
+            <g transform="rotate(-16 294 348)">
+              <rect x="75" y="115" width="440" height="475" fill="#d4ac61" stroke="#102d25" stroke-width="12"/>
+              <rect x="88" y="128" width="414" height="449" fill="#2b7165" stroke="#fffaf0" stroke-width="7"/>
+              <path d="M295 129V575" stroke="#fffaf0" stroke-width="5"/>
+              <rect x="60" y="342" width="470" height="17" fill="url(#net)" stroke="#fffaf0" stroke-width="2"/>
+              <path d="M56 329v42m478-42v42" stroke="#fffaf0" stroke-width="6"/>
+            </g>
+            <path d="M535 108C420 130 474 215 371 250c-68 23-83-23-139-6" fill="none" stroke="#eed96a" stroke-width="4" stroke-dasharray="7 13" stroke-linecap="round"/>
+            <circle cx="232" cy="244" r="40" fill="#eed96a" stroke="#173d35" stroke-width="5"/>
+            <path d="M216 228c13-10 29-10 40-2" fill="none" stroke="#fffaf0" stroke-width="3" stroke-linecap="round"/>
+            <text x="419" y="87" font-family="IBM Plex Mono,monospace" font-size="16" fill="#fffaf0">ПОДАЧА →</text>
+            <text x="91" y="646" font-family="IBM Plex Mono,monospace" font-size="13" fill="#d1ddcf">4 СТОЛА / 1 КЛУБ / 10:00—22:00</text>
+          </svg>
+          <span class="art-caption mono">Играем на Скляренко, 12</span><span class="art-no" aria-hidden="true">04</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="booking"><div class="container booking__inner"><strong class="booking__alert">Сначала бронь!</strong><p>Столы часто заняты. Позвони заранее — подберём свободное время для игры или занятия.</p><a href="tel:+78462443040">244-30-40</a></div></div>
+
+    <section class="ledger" id="play" aria-labelledby="play-title"><div class="container"><div class="section-head"><div><div class="mono">01 / Не нужен повод, чтобы играть</div><h2 class="display" id="play-title">Что здесь<br>происходит?</h2></div><p class="section-head__note">Можно прийти впервые. Можно прийти в сотый раз. Клуб одинаково рад тем, кто учится держать ракетку, и тем, кто считает очки до победного.</p></div><div class="ledger__rows"><div class="ledger__row"><span class="ledger__number mono">01</span><h3>Свободная игра</h3><p>Бронируй стол, бери друга или спарринг-партнёра. До трёх игроков у одного стола по базовому тарифу.</p><span class="ledger__symbol" aria-hidden="true">↗</span></div><div class="ledger__row"><span class="ledger__number mono">02</span><h3>Занятия</h3><p>Индивидуальная работа с инструктором, обучение взрослых с нуля и детская спортивная секция.</p><span class="ledger__symbol" aria-hidden="true">●</span></div><div class="ledger__row"><span class="ledger__number mono">03</span><h3>Турниры</h3><p>Любительские соревнования, клубный рейтинг и свои истории после каждого сыгранного матча.</p><span class="ledger__symbol" aria-hidden="true">#</span></div></div><div class="ledger__footer"><p>Нет ракетки? На месте можно взять ракетку и мячи. Даже спортивная форма и сменная обувь предусмотрены.</p><a class="link-arrow" href="#club">Что ещё есть в клубе ↗</a></div></div></section>
+
+    <section class="rates" id="prices" aria-labelledby="prices-title"><div class="container"><div class="rates__head"><div><div class="mono">02 / Прайс без мелкого шрифта</div><h2 class="display" id="prices-title">Счёт<br>в твою пользу.</h2></div><p>Цена за стол, а не за каждого игрока. Для тренировки с инструктором аренда стола оплачивается отдельно. Перед визитом уточни действующие тарифы по телефону.</p></div><div class="rate-board" role="table" aria-label="Стоимость аренды стола"><div class="rate-board__row rate-board__row--head" role="row"><span role="columnheader">Формат</span><span role="columnheader">Время</span><span role="columnheader">Стоимость</span></div><div class="rate-board__row" role="row"><div role="cell"><strong>Льготная дневная игра</strong><small>Дети, пенсионеры и ветераны</small></div><div class="rate-board__time" role="cell">До 17:00</div><div class="rate-board__value" role="cell">200 ₽ <em>/ час</em></div></div><div class="rate-board__row" role="row"><div role="cell"><strong>Дневная игра</strong><small>До трёх человек у стола</small></div><div class="rate-board__time" role="cell">До 17:00</div><div class="rate-board__value" role="cell">300 ₽ <em>/ час</em></div></div><div class="rate-board__row" role="row"><div role="cell"><strong>Вечерняя игра</strong><small>Для всех категорий, до трёх игроков</small></div><div class="rate-board__time" role="cell">После 17:00</div><div class="rate-board__value" role="cell">350 ₽ <em>/ час</em></div></div></div><div class="rates__small"><div><span class="mono">Индивидуально</span><b>250 ₽/час</b><p>Инструктор. Аренда стола — дополнительно.</p></div><div><span class="mono">Абонемент / 8 часов</span><b>2 000 ₽</b><p>Самостоятельная игра за столом.</p></div><div><span class="mono">С инструктором / 8 часов</span><b>4 000 ₽</b><p>Абонемент на занятия.</p></div><div><span class="mono">Детская секция</span><b>150 ₽</b><p>Одно групповое занятие.</p></div></div><p class="rates__note">Указан прайс из предоставленной информации. Наличие свободных часов, условия абонементов и актуальные цены подтверждает администратор клуба: <a href="tel:+78462443040"><u>244-30-40</u></a>.</p></div></section>
+
+    <section class="culture" id="club" aria-labelledby="club-title"><div class="container culture__intro"><div><div class="mono">03 / После последнего розыгрыша</div><h2 class="display" id="club-title">Здесь<br>остаются.</h2></div><p>Можно сыграть интенсивный матч и не убегать сразу домой. В «Центре» подумали и о паузах между партиями: переодеться, принять душ, выпить чаю и обсудить тот самый спорный мяч.</p></div><div class="culture__grid"><div class="culture__feature"><div class="mono">Клубный ритуал / бесплатно</div><h3>Чай. Печенье.<br>Ещё одну?</h3><p>Вода, горячий чай, конфеты и печенье доступны игрокам и гостям. А если ждёшь свою очередь — можно полистать журнал или сыграть в нарды.</p><div class="stamp">для<br>своих<br>и новых</div></div><div class="culture__things"><div class="culture__thing"><span class="icon" aria-hidden="true">01</span><strong>4 игровых стола</strong><p>Профессиональные столы с качественным покрытием.</p></div><div class="culture__thing"><span class="icon" aria-hidden="true">02</span><strong>Раздевалки и душ</strong><p>Шкафчики под ключ, душевые кабины после игры.</p></div><div class="culture__thing"><span class="icon" aria-hidden="true">03</span><strong>Инвентарь</strong><p>Ракетки, мячи, форма и чистая сменная обувь.</p></div><div class="culture__thing"><span class="icon" aria-hidden="true">04</span><strong>Зона отдыха</strong><p>Лавочки, газеты, журналы и нарды для ожидающих.</p></div></div></div></section>
+
+    <section class="tourney" aria-labelledby="tourney-title"><div class="container tourney__grid"><div><div class="mono">04 / Клубная жизнь</div><h2 class="display" id="tourney-title">Свои<br>турниры.<br>Свои люди.</h2><p class="tourney__copy">У клуба есть не только столы, но и игровое сообщество. Здесь проводят любительские встречи, следят за рейтингом и играют серии с характером — например, «Боевые Улитки». Анонсы и турнирные сетки ищи в группе клуба.</p><a class="button" href="https://vk.ru/knt_club" target="_blank" rel="noopener noreferrer">Смотреть анонсы во ВКонтакте <span aria-hidden="true">↗</span></a></div><div class="tourney__poster" aria-label="Афиша клубных турниров"><div class="poster__top mono"><span>Центр / Самара</span><span>Клубные игры</span></div><div class="poster__title">Боевые<br><span>улитки</span><br>и не только.</div><div class="poster__foot"><p>От первой партии до таблицы лидеров.</p><p>Даты ближайших игр уточняй в сообществе.</p></div></div></div></section>
+
+    <section class="find" id="route" aria-labelledby="route-title"><div class="container find__grid"><div><div class="mono">05 / Как нас найти</div><h2 class="display" id="route-title">Третий этаж.<br>Первый стол.</h2><p class="find__address">Самара, ул. Скляренко, 12<br>3-й этаж · Октябрьский район</p><a class="button" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A1%D0%BA%D0%BB%D1%8F%D1%80%D0%B5%D0%BD%D0%BA%D0%BE%2C%2012" target="_blank" rel="noopener noreferrer">Построить маршрут <span aria-hidden="true">↗</span></a></div><div><div class="find__steps"><div class="find__step"><b>Метро</b><p>«Российская» — примерно 5–7 минут пешком. Двигайся в сторону улицы Скляренко.</p></div><div class="find__step"><b>Остановка</b><p>От пересечения Мичурина и проспекта Масленникова — около квартала в сторону Волги. Подойдёт и остановка «КРЦ Звезда».</p></div><div class="find__step"><b>Машина</b><p>Здание на пересечении Скляренко и Николая Панова. Поблизости есть парковочные зоны.</p></div></div><div class="find__mini"><span>Работаем ежедневно с 10:00 до 22:00.<br>Стол — только после предварительного бронирования.</span><a class="link-arrow" href="tel:+78462443040">Забронировать ↗</a></div></div></div></section>
+
+    <section class="last-call" aria-labelledby="last-title"><div class="container last-call__grid"><div><div class="mono">Партия начинается со звонка</div><h2 class="display" id="last-title">Стол найдём.<br>Ракетку дадим.</h2></div><div class="last-call__action"><a class="last-call__phone" href="tel:+78462443040">244-30-40 ↗</a><p>Каждый день · 10:00–22:00</p></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer__grid"><div><a class="logo" href="#top">ЦЕНТР<span>.</span></a><p class="footer__tag">Клуб настольного тенниса в Самаре. Скляренко, 12, третий этаж.</p></div><div class="footer__col"><p class="mono">Клуб</p><a href="#play">Игра и занятия</a><a href="#prices">Цены</a><a href="#club">Что есть в зале</a><a href="#route">Как добраться</a></div><div class="footer__col"><p class="mono">Связь</p><a href="tel:+78462443040">244-30-40</a><a href="https://vk.ru/knt_club" target="_blank" rel="noopener noreferrer">ВКонтакте ↗</a><a href="http://www.knts.ru/" target="_blank" rel="noopener noreferrer">Сайт клуба ↗</a></div></div><div class="footer__bottom"><span>Центр настольного тенниса «Центр» · Самара</span><span>Стоимость, расписание и наличие столов уточняйте перед визитом.</span></div></div></footer>
+</body>
+</html>
